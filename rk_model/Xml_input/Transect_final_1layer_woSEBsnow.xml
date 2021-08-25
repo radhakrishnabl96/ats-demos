@@ -15,8 +15,11 @@
     <ParameterList name="domain" type="ParameterList">
       <Parameter name="mesh type" type="string" value="read mesh file" />
       <ParameterList name="read mesh file parameters" type="ParameterList">
-        <Parameter name="file" type="string" value="../data_mesh/test_hillslope.exo" />
+        <Parameter name="file" type="string" value="../../Data/data_mesh/test_hillslope.exo" />
         <Parameter name="format" type="string" value="Exodus II" />
+      </ParameterList>
+      <ParameterList name="verbose object" type="ParameterList">
+        <Parameter name="verbosity level" type="string" value="extreme" />
       </ParameterList>
     </ParameterList>
     <!-- Since snow module is not included, the below code is commented out -->
@@ -52,7 +55,7 @@
     <!-- <ParameterList name="subsurface domain peat" type="ParameterList">
       <ParameterList name="region: labeled set" type="ParameterList">
         <Parameter name="label" type="string" value="1001" />
-        <Parameter name="file" type="string" value="../data_mesh/test_hillslope.exo" />
+        <Parameter name="file" type="string" value="../../Data/data_mesh/test_hillslope.exo" />
         <Parameter name="format" type="string" value="Exodus II" />
         <Parameter name="entity" type="string" value="cell" />
       </ParameterList> 
@@ -60,7 +63,7 @@
     <ParameterList name="subsurface domain mineral" type="ParameterList">
       <ParameterList name="region: labeled set" type="ParameterList">
         <Parameter name="label" type="string" value="1002" />
-        <Parameter name="file" type="string" value="../data_mesh/test_hillslope.exo" />
+        <Parameter name="file" type="string" value="../../Data/data_mesh/test_hillslope.exo" />
         <Parameter name="format" type="string" value="Exodus II" />
         <Parameter name="entity" type="string" value="cell" />
       </ParameterList>
@@ -82,7 +85,7 @@
     <ParameterList name="surface" type="ParameterList">
       <ParameterList name="region: labeled set" type="ParameterList">
         <Parameter name="label" type="string" value="2" />
-        <Parameter name="file" type="string" value="../data_mesh/test_hillslope.exo" />
+        <Parameter name="file" type="string" value="../../Data/data_mesh/test_hillslope.exo" />
         <Parameter name="format" type="string" value="Exodus II" />
         <Parameter name="entity" type="string" value="face" />
       </ParameterList>
@@ -90,11 +93,15 @@
     <ParameterList name="bottom face" type="ParameterList">
       <ParameterList name="region: labeled set" type="ParameterList">
         <Parameter name="label" type="string" value="1" />
-        <Parameter name="file" type="string" value="../data_mesh/test_hillslope.exo" />
+        <Parameter name="file" type="string" value="../../Data/data_mesh/test_hillslope.exo" />
         <Parameter name="format" type="string" value="Exodus II" />
         <Parameter name="entity" type="string" value="face" />
       </ParameterList>
     </ParameterList>
+  </ParameterList>
+
+  <ParameterList name="verbose object" type="ParameterList">
+    <Parameter name="verbosity level" type="string" value="extreme" />
   </ParameterList>
 
   <!-- Third module - Cycle driver (Coordinator) -->
@@ -112,6 +119,9 @@
         </ParameterList>
         <ParameterList name="energy" type="ParameterList">
           <Parameter name="PK type" type="string" value="three-phase energy" />
+        </ParameterList>
+        <ParameterList name="verbose object" type="ParameterList">
+          <Parameter name="verbosity level" type="string" value="extreme" />
         </ParameterList>
       </ParameterList>
     </ParameterList>

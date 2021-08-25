@@ -12,7 +12,7 @@
     <ParameterList name="domain" type="ParameterList">
       <Parameter name="mesh type" type="string" value="read mesh file" />
       <ParameterList name="read mesh file parameters" type="ParameterList">
-        <Parameter name="file" type="string" value="../data_mesh/test_hillslope.exo" />
+        <Parameter name="file" type="string" value="../../Data/data_mesh/test_hillslope.exo" />
         <Parameter name="format" type="string" value="Exodus II" />
       </ParameterList>
     </ParameterList>
@@ -42,7 +42,7 @@
     <ParameterList name="subsurface domain peat" type="ParameterList">
       <ParameterList name="region: labeled set" type="ParameterList">
         <Parameter name="label" type="string" value="1001" />
-        <Parameter name="file" type="string" value="../data_mesh/test_hillslope.exo" />
+        <Parameter name="file" type="string" value="../../Data/data_mesh/test_hillslope.exo" />
         <Parameter name="format" type="string" value="Exodus II" />
         <Parameter name="entity" type="string" value="cell" />
       </ParameterList>
@@ -50,7 +50,7 @@
     <ParameterList name="subsurface domain mineral" type="ParameterList">
       <ParameterList name="region: labeled set" type="ParameterList">
         <Parameter name="label" type="string" value="1002" />
-        <Parameter name="file" type="string" value="../data_mesh/test_hillslope.exo" />
+        <Parameter name="file" type="string" value="../../Data/data_mesh/test_hillslope.exo" />
         <Parameter name="format" type="string" value="Exodus II" />
         <Parameter name="entity" type="string" value="cell" />
       </ParameterList>
@@ -70,7 +70,7 @@
     <ParameterList name="surface" type="ParameterList">
       <ParameterList name="region: labeled set" type="ParameterList">
         <Parameter name="label" type="string" value="2" />
-        <Parameter name="file" type="string" value="../data_mesh/test_hillslope.exo" />
+        <Parameter name="file" type="string" value="../../Data/data_mesh/test_hillslope.exo" />
         <Parameter name="format" type="string" value="Exodus II" />
         <Parameter name="entity" type="string" value="face" />
       </ParameterList>
@@ -78,7 +78,7 @@
     <ParameterList name="bottom face" type="ParameterList">
       <ParameterList name="region: labeled set" type="ParameterList">
         <Parameter name="label" type="string" value="1" />
-        <Parameter name="file" type="string" value="../data_mesh/test_hillslope.exo" />
+        <Parameter name="file" type="string" value="../../Data/data_mesh/test_hillslope.exo" />
         <Parameter name="format" type="string" value="Exodus II" />
         <Parameter name="entity" type="string" value="face" />
       </ParameterList>
@@ -147,7 +147,7 @@
 
       <ParameterList name="precipitation function" type="ParameterList">
         <ParameterList name="function-tabular" type="ParameterList">
-          <Parameter name="file" type="string" value="../data/spinup-10yr-snowJan1.h5" />
+          <Parameter name="file" type="string" value="../data_AH_example/spinup-10yr-snowJan1.h5" />
           <Parameter name="x header" type="string" value="time [s]" />
           <Parameter name="y header" type="string" value="precipitation snow [m SWE s^-1]" />
         </ParameterList>
@@ -368,7 +368,7 @@
       <ParameterList name="initial condition" type="ParameterList">
         <Parameter name="initialize faces from cells" type="bool" value="true" />
         <ParameterList name="initialize from 1D column" type="ParameterList">
-          <Parameter name="file" type="string" value="../data/column_data.h5" />
+          <Parameter name="file" type="string" value="../data_AH_example/column_data.h5" />
           <Parameter name="z header" type="string" value="z" />
           <Parameter name="f header" type="string" value="pressure" />
           <Parameter name="coordinate orientation" type="string" value="depth" />
@@ -479,7 +479,7 @@
       <ParameterList name="initial condition" type="ParameterList">
         <Parameter name="initialize faces from cells" type="bool" value="true" />
         <ParameterList name="initialize from 1D column" type="ParameterList">
-          <Parameter name="file" type="string" value="../data/column_data.h5" />
+          <Parameter name="file" type="string" value="../data_AH_example/column_data.h5" />
           <Parameter name="z header" type="string" value="z" />
           <Parameter name="f header" type="string" value="temperature" />
           <Parameter name="coordinate orientation" type="string" value="depth" />
@@ -914,7 +914,7 @@
             <Parameter name="component" type="string" value="cell" />
             <ParameterList name="function" type="ParameterList">
               <ParameterList name="function-tabular" type="ParameterList">
-                <Parameter name="file" type="string" value="../data/spinup-10yr-snowJan1.h5" />
+                <Parameter name="file" type="string" value="../data_AH_example/spinup-10yr-snowJan1.h5" />
                 <Parameter name="x header" type="string" value="time [s]" />
                 <Parameter name="y header" type="string" value="incoming shortwave radiation [W m^-2]" />
               </ParameterList>
@@ -931,7 +931,7 @@
             <Parameter name="component" type="string" value="cell" />
             <ParameterList name="function" type="ParameterList">
               <ParameterList name="function-tabular" type="ParameterList">
-                <Parameter name="file" type="string" value="../data/spinup-10yr-snowJan1.h5" />
+                <Parameter name="file" type="string" value="../data_AH_example/spinup-10yr-snowJan1.h5" />
                 <Parameter name="x header" type="string" value="time [s]" />
                 <Parameter name="y header" type="string" value="air temperature [K]" />
               </ParameterList>
@@ -948,7 +948,7 @@
             <Parameter name="component" type="string" value="cell" />
             <ParameterList name="function" type="ParameterList">
               <ParameterList name="function-tabular" type="ParameterList">
-                <Parameter name="file" type="string" value="../data/spinup-10yr-snowJan1.h5" />
+                <Parameter name="file" type="string" value="../data_AH_example/spinup-10yr-snowJan1.h5" />
                 <Parameter name="x header" type="string" value="time [s]" />
                 <Parameter name="y header" type="string" value="relative humidity [-]" />
               </ParameterList>
@@ -965,7 +965,7 @@
             <Parameter name="component" type="string" value="cell" />
             <ParameterList name="function" type="ParameterList">
               <ParameterList name="function-tabular" type="ParameterList">
-                <Parameter name="file" type="string" value="../data/spinup-10yr-snowJan1.h5" />
+                <Parameter name="file" type="string" value="../data_AH_example/spinup-10yr-snowJan1.h5" />
                 <Parameter name="x header" type="string" value="time [s]" />
                 <Parameter name="y header" type="string" value="wind speed [m s^-1]" />
               </ParameterList>
@@ -982,7 +982,7 @@
             <Parameter name="component" type="string" value="cell" />
             <ParameterList name="function" type="ParameterList">
               <ParameterList name="function-tabular" type="ParameterList">
-                <Parameter name="file" type="string" value="../data/spinup-10yr-snowJan1.h5" />
+                <Parameter name="file" type="string" value="../data_AH_example/spinup-10yr-snowJan1.h5" />
                 <Parameter name="x header" type="string" value="time [s]" />
                 <Parameter name="y header" type="string" value="precipitation rain [m s^-1]" />
               </ParameterList>
