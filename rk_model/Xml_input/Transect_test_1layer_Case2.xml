@@ -16,7 +16,8 @@
         <Parameter name="format" type="string" value="Exodus II" />
       </ParameterList>
     </ParameterList>
-    <ParameterList name="snow" type="ParameterList">
+    <!-- We are not considering the snow layer-->
+      <ParameterList name="snow" type="ParameterList">
       <Parameter name="mesh type" type="string" value="aliased" />
       <ParameterList name="aliased parameters" type="ParameterList">
         <Parameter name="alias" type="string" value="surface" />
