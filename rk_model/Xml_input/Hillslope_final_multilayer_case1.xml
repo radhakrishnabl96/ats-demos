@@ -120,7 +120,7 @@
   <ParameterList name="cycle driver" type="ParameterList">
     <Parameter name="start time" type="double" value="0.0" />
     <Parameter name="start time units" type="string" value="s" />
-    <Parameter name="end time" type="double" value="10.0" />
+    <Parameter name="end time" type="double" value="100.0" />
     <Parameter name="end time units" type="string" value="d" />
     <ParameterList name="PK tree" type="ParameterList">
       <ParameterList name="Top level MPC" type="ParameterList">
@@ -673,10 +673,10 @@
       <Parameter name="times start period stop 0" type="Array(double)" value="{0.0,1.0,-1.0}" />
       <Parameter name="times start period stop 0 units" type="string" value="d" />
     </ParameterList>
-    <ParameterList name="surface" type="ParameterList">
+    <!--<ParameterList name="surface" type="ParameterList">
       <Parameter name="times start period stop 0" type="Array(double)" value="{0.0,1.0,-1.0}" />
       <Parameter name="times start period stop 0 units" type="string" value="d" />
-    </ParameterList>
+    </ParameterList> -->
   </ParameterList>
 
   <!-- Seventh Module: Checkpoint -->
