@@ -1,0 +1,118 @@
+# Observation File: observation.dat column names:
+# -----------------------------------------------------------------------------
+# Observation Name: time [s]
+# -----------------------------------------------------------------------------
+# Observation Name: water content [mol]
+# Region: subsurface domain
+# Functional: extensive integral
+# Variable: water_content
+# Number of Vectors: 1
+# -----------------------------------------------------------------------------
+# Observation Name: point -0.01 temperature [K]
+# Region: subsurface point -0.01
+# Functional: point
+# Variable: temperature
+# Number of Vectors: 1
+# -----------------------------------------------------------------------------
+# Observation Name: point -0.04 temperature [K]
+# Region: subsurface point -0.04
+# Functional: point
+# Variable: temperature
+# Number of Vectors: 1
+# -----------------------------------------------------------------------------
+# Observation Name: point -0.1 temperature [K]
+# Region: subsurface point -0.1
+# Functional: point
+# Variable: temperature
+# Number of Vectors: 1
+# -----------------------------------------------------------------------------
+# Observation Name: point -0.2 temperature [K]
+# Region: subsurface point -0.2
+# Functional: point
+# Variable: temperature
+# Number of Vectors: 1
+# -----------------------------------------------------------------------------
+# Observation Name: point -0.4 temperature [K]
+# Region: subsurface point -0.4
+# Functional: point
+# Variable: temperature
+# Number of Vectors: 1
+# -----------------------------------------------------------------------------
+# Observation Name: point -0.8 temperature [K]
+# Region: subsurface point -0.8
+# Functional: point
+# Variable: temperature
+# Number of Vectors: 1
+# -----------------------------------------------------------------------------
+# Observation Name: point -1.2 temperature [K]
+# Region: subsurface point -1.2
+# Functional: point
+# Variable: temperature
+# Number of Vectors: 1
+# -----------------------------------------------------------------------------
+# Observation Name: point -1.6 temperature [K]
+# Region: subsurface point -1.6
+# Functional: point
+# Variable: temperature
+# Number of Vectors: 1
+# -----------------------------------------------------------------------------
+# Observation Name: point -0.01 saturation liquid
+# Region: subsurface point -0.01
+# Functional: point
+# Variable: saturation_liquid
+# Number of Vectors: 1
+# -----------------------------------------------------------------------------
+# Observation Name: point -0.04 saturation liquid
+# Region: subsurface point -0.04
+# Functional: point
+# Variable: saturation_liquid
+# Number of Vectors: 1
+# -----------------------------------------------------------------------------
+# Observation Name: point -0.1 saturation liquid
+# Region: subsurface point -0.1
+# Functional: point
+# Variable: saturation_liquid
+# Number of Vectors: 1
+# -----------------------------------------------------------------------------
+# Observation Name: point -0.2 saturation liquid
+# Region: subsurface point -0.2
+# Functional: point
+# Variable: saturation_liquid
+# Number of Vectors: 1
+# -----------------------------------------------------------------------------
+# Observation Name: point -0.4 saturation liquid
+# Region: subsurface point -0.4
+# Functional: point
+# Variable: saturation_liquid
+# Number of Vectors: 1
+# -----------------------------------------------------------------------------
+# Observation Name: point -0.8 saturation liquid
+# Region: subsurface point -0.8
+# Functional: point
+# Variable: saturation_liquid
+# Number of Vectors: 1
+# -----------------------------------------------------------------------------
+# Observation Name: point -1.2 saturation liquid
+# Region: subsurface point -1.2
+# Functional: point
+# Variable: saturation_liquid
+# Number of Vectors: 1
+# -----------------------------------------------------------------------------
+# Observation Name: point -1.6 saturation liquid
+# Region: subsurface point -1.6
+# Functional: point
+# Variable: saturation_liquid
+# Number of Vectors: 1
+# =============================================================================
+"time [s]" "water content [mol]" "point -0.01 temperature [K]" "point -0.04 temperature [K]" "point -0.1 temperature [K]" "point -0.2 temperature [K]" "point -0.4 temperature [K]" "point -0.8 temperature [K]" "point -1.2 temperature [K]" "point -1.6 temperature [K]" "point -0.01 saturation liquid" "point -0.04 saturation liquid" "point -0.1 saturation liquid" "point -0.2 saturation liquid" "point -0.4 saturation liquid" "point -0.8 saturation liquid" "point -1.2 saturation liquid" "point -1.6 saturation liquid"
+0.000000000000e+00 1.189025325048e+06 2.736499998950e+02 2.736499998950e+02 2.736499998950e+02 2.736499998950e+02 2.736499998949e+02 2.736499998945e+02 2.736499998940e+02 2.736499998928e+02 2.524832501741e-01 2.526986101442e-01 6.731445434369e-01 6.755164851279e-01 6.796912561132e-01 6.871377509050e-01 6.952395968317e-01 7.075154184040e-01
+8.640000000000e+04 1.189025325051e+06 2.921632627500e+02 2.881346842664e+02 2.839009518967e+02 2.791231448961e+02 2.752432169083e+02 2.738056447751e+02 2.736628874407e+02 2.736503864998e+02 2.527752415068e-01 2.529930762481e-01 6.733000861339e-01 6.756377649670e-01 6.797476135059e-01 6.871602916387e-01 6.952588140200e-01 7.075346239201e-01
+1.728000000000e+05 1.189025325051e+06 2.923900195035e+02 2.894456001838e+02 2.862407872015e+02 2.820239568991e+02 2.773263310892e+02 2.743717514317e+02 2.737673133240e+02 2.736583612711e+02 2.527942350043e-01 2.530097191650e-01 6.733601823752e-01 6.757131232228e-01 6.798267365475e-01 6.872013798904e-01 6.952832852388e-01 7.075543335014e-01
+2.592000000000e+05 1.189025325051e+06 2.925044671261e+02 2.901102263420e+02 2.874694522990e+02 2.837747299836e+02 2.790183704208e+02 2.751040288016e+02 2.739647483129e+02 2.736808014795e+02 2.528001868161e-01 2.530147223636e-01 6.734010577916e-01 6.757618136818e-01 6.798898185599e-01 6.872497141418e-01 6.953128938156e-01 7.075748929500e-01
+3.456000000000e+05 1.189025325051e+06 2.925740543860e+02 2.905150977955e+02 2.882295417830e+02 2.849331119268e+02 2.803433960787e+02 2.758849461368e+02 2.742423446454e+02 2.737236026859e+02 2.528011036650e-01 2.530152873945e-01 6.734330111386e-01 6.757975725011e-01 6.799373780840e-01 6.872978391199e-01 6.953459759899e-01 7.075961135018e-01
+4.320000000000e+05 1.189025325051e+06 2.926214063431e+02 2.907908698398e+02 2.887514808249e+02 2.857583286275e+02 2.813885424951e+02 2.766479781912e+02 2.745779411739e+02 2.737901082738e+02 2.527997692267e-01 2.530138060121e-01 6.734602241186e-01 6.758268791246e-01 6.799748550585e-01 6.873420527530e-01 6.953803375661e-01 7.076173405088e-01
+5.184000000000e+05 1.189025325051e+06 2.926560840157e+02 2.909929458693e+02 2.891357960806e+02 2.863796654881e+02 2.822287784932e+02 2.773626949426e+02 2.749495103877e+02 2.738810551389e+02 2.527973376169e-01 2.530113101247e-01 6.734845511684e-01 6.758524984465e-01 6.800060475869e-01 6.873813556913e-01 6.954141379847e-01 7.076376401095e-01
+6.048000000000e+05 1.189025325051e+06 2.926828079979e+02 2.911487326806e+02 2.894330159365e+02 2.868673064649e+02 2.829183286236e+02 2.780188010295e+02 2.753391155942e+02 2.739951521689e+02 2.527943641570e-01 2.530083115190e-01 6.735068766541e-01 6.758756938675e-01 6.800331111183e-01 6.874159591871e-01 6.954460660437e-01 7.076560285656e-01
+6.912000000000e+05 1.189025325051e+06 2.927041818641e+02 2.912733640507e+02 2.896713211470e+02 2.872623356377e+02 2.834950467086e+02 2.786158738690e+02 2.757336517888e+02 2.741298262929e+02 2.527911452186e-01 2.530050879135e-01 6.735276232980e-01 6.758970608590e-01 6.800572075303e-01 6.874463632709e-01 6.954752700510e-01 7.076716006861e-01
+7.776000000000e+05 1.189025325051e+06 2.927217644603e+02 2.913759082915e+02 2.898677115694e+02 2.875903586796e+02 2.839854638428e+02 2.791577816234e+02 2.761242179701e+02 2.742818781331e+02 2.527878493350e-01 2.530017986528e-01 6.735469657905e-01 6.759168597766e-01 6.800789375374e-01 6.874730216825e-01 6.955011946588e-01 7.076835235434e-01
+8.640000000000e+05 1.189025325051e+06 2.927365497262e+02 2.914621508488e+02 2.900330852483e+02 2.878681769985e+02 2.844084918008e+02 2.796498995201e+02 2.765051327859e+02 2.744479636593e+02 2.527845751628e-01 2.529985373236e-01 6.735649323913e-01 6.759351615188e-01 6.800985784123e-01 6.874962491208e-01 6.955234937857e-01 7.076911985201e-01
