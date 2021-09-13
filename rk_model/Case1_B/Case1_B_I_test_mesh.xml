@@ -4,9 +4,12 @@
       <Parameter name="build columns from set" type="string" value="surface face" />
       <Parameter name="mesh type" type="string" value="read mesh file" />
       <ParameterList name="read mesh file parameters" type="ParameterList">
-        <Parameter name="file" type="string" value="../../Data/data_mesh/test_org_spinup_column.exo" />
+        <Parameter name="file" type="string" value="../../Data/data_mesh/column.exo" />
         <Parameter name="format" type="string" value="Exodus II" />
       </ParameterList>
+    </ParameterList>
+    <ParameterList name="verbose object" type="ParameterList">
+      <Parameter name="verbosity level" type="string" value="extreme" />
     </ParameterList>
   </ParameterList>
 
@@ -18,7 +21,7 @@
     <ParameterList name="subsurface domain peat" type="ParameterList">
       <ParameterList name="region: labeled set" type="ParameterList">
         <Parameter name="label" type="string" value="1001" />
-        <Parameter name="file" type="string" value="../../Data/data_mesh/test_org_spinup_column.exo" />
+        <Parameter name="file" type="string" value="../../Data/data_mesh/column.exo" />
         <Parameter name="format" type="string" value="Exodus II" />
         <Parameter name="entity" type="string" value="cell" />
       </ParameterList>
@@ -26,23 +29,23 @@
     <ParameterList name="subsurface domain mineral" type="ParameterList">
       <ParameterList name="region: labeled set" type="ParameterList">
         <Parameter name="label" type="string" value="1002" />
-        <Parameter name="file" type="string" value="../../Data/data_mesh/test_org_spinup_column.exo" />
+        <Parameter name="file" type="string" value="../../Data/data_mesh/column.exo" />
         <Parameter name="format" type="string" value="Exodus II" />
         <Parameter name="entity" type="string" value="cell" />
       </ParameterList>
     </ParameterList>
     <ParameterList name="subsurface domain bedrock" type="ParameterList">
       <ParameterList name="region: labeled set" type="ParameterList">
-        <Parameter name="label" type="string" value="101" />
-        <Parameter name="file" type="string" value="../../Data/data_mesh/test_org_spinup_column.exo" />
+        <Parameter name="label" type="string" value="999" />
+        <Parameter name="file" type="string" value="../../Data/data_mesh/column.exo" />
         <Parameter name="format" type="string" value="Exodus II" />
         <Parameter name="entity" type="string" value="cell" />
       </ParameterList>
     </ParameterList>
-    <ParameterList name="surface face" type="ParameterList">
+    <!--<ParameterList name="surface face" type="ParameterList">
       <ParameterList name="region: labeled set" type="ParameterList">
         <Parameter name="label" type="string" value="2" />
-        <Parameter name="file" type="string" value="../../Data/data_mesh/test_org_spinup_column.exo" />
+        <Parameter name="file" type="string" value="../../Data/data_mesh/yakou_column.exo" />
         <Parameter name="format" type="string" value="Exodus II" />
         <Parameter name="entity" type="string" value="face" />
       </ParameterList>
@@ -50,13 +53,13 @@
     <ParameterList name="bottom face" type="ParameterList">
       <ParameterList name="region: labeled set" type="ParameterList">
         <Parameter name="label" type="string" value="1" />
-        <Parameter name="file" type="string" value="../../Data/data_mesh/test_org_spinup_column.exo" />
+        <Parameter name="file" type="string" value="../../Data/data_mesh/yakou_column.exo" />
         <Parameter name="format" type="string" value="Exodus II" />
         <Parameter name="entity" type="string" value="face" />
       </ParameterList>
-    </ParameterList>
+    </ParameterList> -->
     <!-- Considering surface at {0.0, 0.0, 0.0} and moving downwards, therefore negative. Assuming that the first sensor is 1 cm below the surface and so on .. -->
-    <ParameterList name="subsurface point -0.01" type="ParameterList">
+    <!--<ParameterList name="subsurface point -0.01" type="ParameterList">
       <ParameterList name="region: point" type="ParameterList">
         <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,-0.01}" />
       </ParameterList>
@@ -96,43 +99,41 @@
         <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,-1.6}" />
       </ParameterList>
     </ParameterList>
-    <ParameterList name="subsurface point -1.6" type="ParameterList">
-      <ParameterList name="region: point" type="ParameterList">
-        <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,-1.6}" />
-      </ParameterList>
-    </ParameterList>
-    <ParameterList name="subsurface point -5" type="ParameterList">
+    <ParameterList name="subsurface point -5.0" type="ParameterList">
       <ParameterList name="region: point" type="ParameterList">
         <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,-5.0}" />
       </ParameterList>
     </ParameterList>
-    <ParameterList name="subsurface point -10" type="ParameterList">
+    <ParameterList name="subsurface point -10.0" type="ParameterList">
       <ParameterList name="region: point" type="ParameterList">
         <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,-10.0}" />
       </ParameterList>
     </ParameterList>
-    <ParameterList name="subsurface point -20" type="ParameterList">
+    <ParameterList name="subsurface point -20.0" type="ParameterList">
       <ParameterList name="region: point" type="ParameterList">
         <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,-20.0}" />
       </ParameterList>
     </ParameterList>
-    <ParameterList name="subsurface point -30" type="ParameterList">
+    <ParameterList name="subsurface point -30.0" type="ParameterList">
       <ParameterList name="region: point" type="ParameterList">
         <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,-30.0}" />
       </ParameterList>
     </ParameterList>
-    <ParameterList name="subsurface point -40" type="ParameterList">
+    <ParameterList name="subsurface point -38.0" type="ParameterList">
       <ParameterList name="region: point" type="ParameterList">
-        <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,-40.0}" />
+        <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,-38.0}" />
       </ParameterList>
-    </ParameterList>
-  </ParameterList>
+    </ParameterList> -->
+  </ParameterList> 
+
 
   <ParameterList name="cycle driver" type="ParameterList">
     <Parameter name="start time" type="double" value=" 0" />
     <Parameter name="start time units" type="string" value="s" />
     <Parameter name="end time" type="double" value="1000" />
     <Parameter name="end time units" type="string" value="y" />
+    <!-- To check if the xml file is running for the desired outputs -->
+    <!--<Parameter name="end time units" type="string" value="s" /> -->
     <ParameterList name="PK tree" type="ParameterList">
       <ParameterList name="Top level MPC" type="ParameterList">
         <Parameter name="PK type" type="string" value="subsurface permafrost" />
@@ -651,7 +652,7 @@
     <ParameterList name="observation file" type="ParameterList">
       <Parameter name="write interval" type="int" value="1" />
       <Parameter name="observation output filename" type="string" value="observation.dat" />
-      <Parameter name="times start period stop" type="Array(double)" value="{0.0,10.0,-1.0}" />
+      <Parameter name="times start period stop" type="Array(double)" value="{0.0,1.0,-1.0}" />
       <Parameter name="times start period stop units" type="string" value="y" />
       <Parameter name="delimiter" type="string" value=" " />
       <ParameterList name="observed quantities" type="ParameterList">
@@ -667,7 +668,8 @@
           <Parameter name="functional" type="string" value="average" />
           <Parameter name="location name" type="string" value="cell" />
         </ParameterList> -->
-        <!-- Finding the temperature at the 8 depths -->
+
+        <!-- Finding the temperature at the 13 depths -->
         <ParameterList name="point -0.01 temperature [K]" type="ParameterList">
           <Parameter name="variable" type="string" value="temperature" />
           <Parameter name="region" type="string" value="subsurface point -0.01" />
@@ -716,7 +718,38 @@
           <Parameter name="functional" type="string" value="point" />
           <Parameter name="location name" type="string" value="cell" />
         </ParameterList>
-        <!-- Extracting data of the saturation of liquid at the 8 depths-->
+        <ParameterList name="point -5.0 temperature [K]" type="ParameterList">
+          <Parameter name="variable" type="string" value="temperature" />
+          <Parameter name="region" type="string" value="subsurface point -5.0" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="point -10.0 temperature [K]" type="ParameterList">
+          <Parameter name="variable" type="string" value="temperature" />
+          <Parameter name="region" type="string" value="subsurface point -10.0" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="point -20.0 temperature [K]" type="ParameterList">
+          <Parameter name="variable" type="string" value="temperature" />
+          <Parameter name="region" type="string" value="subsurface point -20.0" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="point -30.0 temperature [K]" type="ParameterList">
+          <Parameter name="variable" type="string" value="temperature" />
+          <Parameter name="region" type="string" value="subsurface point -30.0" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="point -38.0 temperature [K]" type="ParameterList">
+          <Parameter name="variable" type="string" value="temperature" />
+          <Parameter name="region" type="string" value="subsurface point -38.0" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+
+        <!-- Extracting data of the saturation of liquid at the 13 depths-->
         <ParameterList name="point -0.01 saturation liquid" type="ParameterList">
           <Parameter name="variable" type="string" value="saturation_liquid" />
           <Parameter name="region" type="string" value="subsurface point -0.01" />
@@ -762,6 +795,80 @@
         <ParameterList name="point -1.6 saturation liquid" type="ParameterList">
           <Parameter name="variable" type="string" value="saturation_liquid" />
           <Parameter name="region" type="string" value="subsurface point -1.6" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="point -5.0 saturation liquid" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_liquid" />
+          <Parameter name="region" type="string" value="subsurface point -5.0" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="point -10.0 saturation liquid" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_liquid" />
+          <Parameter name="region" type="string" value="subsurface point -10.0" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+
+        <!-- Extracting data of the saturation of ice at the 13 depths-->
+        <ParameterList name="point -0.01 saturation ice" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_ice" />
+          <Parameter name="region" type="string" value="subsurface point -0.01" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="point -0.04 saturation ice" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_ice" />
+          <Parameter name="region" type="string" value="subsurface point -0.04" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="point -0.1 saturation ice" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_ice" />
+          <Parameter name="region" type="string" value="subsurface point -0.1" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="point -0.2 saturation ice" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_ice" />
+          <Parameter name="region" type="string" value="subsurface point -0.2" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="point -0.4 saturation ice" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_ice" />
+          <Parameter name="region" type="string" value="subsurface point -0.4" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="point -0.8 saturation ice" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_ice" />
+          <Parameter name="region" type="string" value="subsurface point -0.8" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="point -1.2 saturation ice" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_ice" />
+          <Parameter name="region" type="string" value="subsurface point -1.2" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="point -1.6 saturation ice" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_ice" />
+          <Parameter name="region" type="string" value="subsurface point -1.6" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="point -5.0 saturation ice" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_ice" />
+          <Parameter name="region" type="string" value="subsurface point -5.0" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="point -10.0 saturation ice" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_ice" />
+          <Parameter name="region" type="string" value="subsurface point -10.0" />
           <Parameter name="functional" type="string" value="point" />
           <Parameter name="location name" type="string" value="cell" />
         </ParameterList>
