@@ -55,6 +55,12 @@
         <Parameter name="entity" type="string" value="face" />
       </ParameterList>
     </ParameterList>
+    <ParameterList name="east face seepage" type="ParameterList">
+      <ParameterList name="region: box" type="ParameterList">
+        <Parameter name="low coordinate" type="Array(double)" value="{0, 0, -1.0}" />
+        <Parameter name="high coordinate" type="Array(double)" value="{1, 0, -0.9}" />
+      </ParameterList>
+    </ParameterList>
     <!-- Considering surface at {0.0, 0.0, 0.0} and moving downwards, therefore negative. Assuming that the first sensor is 1 cm below the surface and so on .. -->
     <ParameterList name="subsurface point -0.01" type="ParameterList">
       <ParameterList name="region: point" type="ParameterList">
@@ -253,6 +259,18 @@
                 <Parameter name="file" type="string" value="../Data/Yakou_data_actualprep_5yrs.h5" />
                 <Parameter name="x header" type="string" value="time [s]" />
                 <Parameter name="y header" type="string" value="precipitation rain [mols m^-2 s^-1]" /> 
+              </ParameterList>
+            </ParameterList>
+          </ParameterList>
+        </ParameterList>
+                <!-- Creating a east seepage face pressure at {-0.5 m to -0.6 m} of 101325 Pa such that the water above this point will overflow through this boundary, 
+        At this point, seepage face pressure = 101325 Pa which signifies ground water table -->
+        <ParameterList name="seepage face pressure" type="ParameterList">
+          <ParameterList name="seepage" type="ParameterList">
+            <Parameter name="regions" type="Array(string)" value="{east face seepage}" />
+            <ParameterList name="boundary pressure" type="ParameterList">
+              <ParameterList name="function-constant" type="ParameterList">
+                <Parameter name="value" type="double" value="101325" />
               </ParameterList>
             </ParameterList>
           </ParameterList>
