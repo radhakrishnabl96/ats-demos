@@ -68,67 +68,67 @@
       
     <ParameterList name="subsurface point -0.01" type="ParameterList">
       <ParameterList name="region: point" type="ParameterList">
-        <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,-0.01}" />
+        <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,39.99}" />
       </ParameterList>
     </ParameterList>
     <ParameterList name="subsurface point -0.04" type="ParameterList">
       <ParameterList name="region: point" type="ParameterList">
-        <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,-0.04}" />
+        <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,39.96}" />
       </ParameterList>
     </ParameterList>
     <ParameterList name="subsurface point -0.1" type="ParameterList">
       <ParameterList name="region: point" type="ParameterList">
-        <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,-0.1}" />
+        <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,39.9}" />
       </ParameterList>
     </ParameterList>
     <ParameterList name="subsurface point -0.2" type="ParameterList">
       <ParameterList name="region: point" type="ParameterList">
-        <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,-0.2}" />
+        <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,39.8}" />
       </ParameterList>
     </ParameterList>
     <ParameterList name="subsurface point -0.4" type="ParameterList">
       <ParameterList name="region: point" type="ParameterList">
-        <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,-0.4}" />
+        <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,39.6}" />
       </ParameterList>
     </ParameterList>
     <ParameterList name="subsurface point -0.8" type="ParameterList">
       <ParameterList name="region: point" type="ParameterList">
-        <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,-0.8}" />
+        <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,39.2}" />
       </ParameterList>
     </ParameterList>
     <ParameterList name="subsurface point -1.2" type="ParameterList">
       <ParameterList name="region: point" type="ParameterList">
-        <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,-1.2}" />
+        <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,38.8}" />
       </ParameterList>
     </ParameterList>
     <ParameterList name="subsurface point -1.6" type="ParameterList">
       <ParameterList name="region: point" type="ParameterList">
-        <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,-1.6}" />
+        <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,38.4}" />
       </ParameterList>
     </ParameterList>
     <ParameterList name="subsurface point -5.0" type="ParameterList">
       <ParameterList name="region: point" type="ParameterList">
-        <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,-5.0}" />
+        <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,35.0}" />
       </ParameterList>
     </ParameterList>
     <ParameterList name="subsurface point -10.0" type="ParameterList">
       <ParameterList name="region: point" type="ParameterList">
-        <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,-10.0}" />
+        <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,30.0}" />
       </ParameterList>
     </ParameterList>
     <ParameterList name="subsurface point -20.0" type="ParameterList">
       <ParameterList name="region: point" type="ParameterList">
-        <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,-20.0}" />
+        <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,20.0}" />
       </ParameterList>
     </ParameterList>
     <ParameterList name="subsurface point -30.0" type="ParameterList">
       <ParameterList name="region: point" type="ParameterList">
-        <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,-30.0}" />
+        <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,10.0}" />
       </ParameterList>
     </ParameterList>
     <ParameterList name="subsurface point -40.0" type="ParameterList">
       <ParameterList name="region: point" type="ParameterList">
-        <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,-40.0}" />
+        <Parameter name="coordinate" type="Array(double)" value="{0.0,0.0,0.0}" />
       </ParameterList>
     </ParameterList>
     <!-- Region: boundary where is this located? - https://amanzi.github.io/ats/input_spec/ATSNativeSpec_1_1.html#boundary - It includes all the entitites on the boundary!-->
@@ -547,6 +547,7 @@
             <ParameterList name="function" type="ParameterList">
               <ParameterList name="function-constant" type="ParameterList">
                 <Parameter name="value" type="double" value="0.15701242" />
+                  <!-- What value do we assign here? The initial condition can be initialized from a spinup or we don't assign anything? -->
               </ParameterList>
             </ParameterList>
           </ParameterList>
@@ -847,6 +848,7 @@
 
       <ParameterList name="snow-source_sink" type="ParameterList">
         <Parameter name="field evaluator type" type="string" value="surface energy balance, three components" />
+        <!-- Does the three components hear mean the three layers - snow, water and bare surface! -->
         <Parameter name="incoming shortwave radiation key" type="string" value="surface-incoming_shortwave_radiation" />
         <Parameter name="volumetric snow depth key" type="string" value="snow-depth" />
         <Parameter name="save diagnostic data" type="bool" value="true" />
@@ -1005,14 +1007,14 @@
             <Parameter name="region" type="string" value="surface domain" />
             <Parameter name="component" type="string" value="cell" />
             <ParameterList name="function" type="ParameterList">
-              <ParameterList name="function-tabular" type="ParameterList">
+              <!--<ParameterList name="function-tabular" type="ParameterList">
                 <Parameter name="file" type="string" value="../data_input/Yakou_data_Case5_B_monthly.h5" />
                 <Parameter name="x header" type="string" value="time [s]" />
                 <Parameter name="y header" type="string" value="precipitation snow [m SWE s^-1]" />
-              </ParameterList> 
-              <!--<ParameterList name="function-constant" type="ParameterList">
+              </ParameterList> --> 
+              <ParameterList name="function-constant" type="ParameterList">
                 <Parameter name="value" type="double" value="0.0" />
-              </ParameterList> -->
+              </ParameterList>
             </ParameterList>
           </ParameterList>
         </ParameterList>
