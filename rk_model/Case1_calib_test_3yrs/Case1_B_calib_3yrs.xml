@@ -354,7 +354,7 @@
             <ParameterList name="boundary temperature" type="ParameterList">
               <ParameterList name="function-tabular" type="ParameterList">
                 <!--<Parameter name="file" type="string" value="../Data/Data_Yakou/Yakou_met_data_ITP_rk/Final_InputData_Model/Yakou_data_2017_cyclic_5yrs.h5" />-->
-                <Parameter name="file" type="string" value="/home/rk/ats_rk/testing/ats-demos/rk_model/Data/Data_Yakou/Yakou_met_data_ITP_rk/Final_InputData_4yrs/Calib_data_2016_2018.h5" />
+                <Parameter name="file" type="string" value="/bigwork/nhgjrabl/Simulations/ats-demos/rk_model/Data/Data_Yakou/Yakou_met_data_ITP_rk/Final_InputData_4yrs/Calib_data_2016_2018.h5" />
                 <Parameter name="x header" type="string" value="time [s]" />
                 <Parameter name="y header" type="string" value="Soil temperature at - 0.00 m [K]" />
               </ParameterList>
