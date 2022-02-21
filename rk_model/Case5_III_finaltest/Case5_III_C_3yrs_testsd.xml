@@ -167,7 +167,7 @@
   <ParameterList name="cycle driver" type="ParameterList">
     <Parameter name="start time" type="double" value="0.0" />
     <Parameter name="start time units" type="string" value="d" />
-    <Parameter name="end time" type="double" value="1096" />
+    <Parameter name="end time" type="double" value="365" />
     <Parameter name="end time units" type="string" value="d" />
     <ParameterList name="PK tree" type="ParameterList">
       <ParameterList name="top level MPC" type="ParameterList">
@@ -1009,9 +1009,10 @@
             <Parameter name="component" type="string" value="cell" />
             <ParameterList name="function" type="ParameterList">
               <ParameterList name="function-tabular" type="ParameterList">
-                <Parameter name="file" type="string" value="/home/rk/ats_rk/testing/ats-demos/rk_model/Data/Data_Yakou/Yakou_met_data_ITP_rk/Final_InputData_4yrs/Calib_data_2016_2018.h5" />
+                <!-- <Parameter name="file" type="string" value="0.2" /> -->
+                <Parameter name="file" type="string" value="/home/rk/ats_rk/testing/ats-demos/rk_model/Case5_III_finaltest/Snow_depth_data/SWE_2016_2018.h5" />
                 <Parameter name="x header" type="string" value="time [s]" />
-                <Parameter name="y header" type="string" value="precipitation snow [m SWE s^-1]_sd0.01" />
+                <Parameter name="y header" type="string" value="precipitation snow [m SWE s^-1]" />
               </ParameterList>
               <!--<ParameterList name="function-constant" type="ParameterList">
                 <Parameter name="value" type="double" value="0.0" />
