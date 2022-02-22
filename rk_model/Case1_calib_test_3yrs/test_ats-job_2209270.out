@@ -1,0 +1,37 @@
+
+================================================================================
+========================== Job Accounting Information ==========================
+=                                                                              =
+=  To get more details about the job, execute: sacct -o all -j 209270
+=                                                                              =
+================================================================================
+
+       JobID    JobName ReqNodes  ReqCPUS     ReqMem  Timelimit   TotalCPU  SystemCPU    UserCPU     MaxRSS   NNodes   NTasks    Elapsed      State ExitCode                       NodeList 
+------------ ---------- -------- -------- ---------- ---------- ---------- ---------- ---------- ---------- -------- -------- ---------- ---------- -------- ------------------------------ 
+209270       test_ats_2        1       32        2Gc   00:20:00  03:24.420  00:05.720  03:18.700                   1            00:03:33  COMPLETED      0:0                       amo-n018 
+209270.batch      batch        1       32        2Gc             00:05.969  00:04.733  00:01.236      9232K        1        1   00:03:33  COMPLETED      0:0                       amo-n018 
+209270.exte+     extern        1       32        2Gc              00:00:00   00:00:00   00:00:00      1488K        1        1   00:03:33  COMPLETED      0:0                       amo-n018 
+209270.0     singulari+        1       32        2Gc             03:18.449  00:00.986  03:17.463    105056K        1        1   00:03:32  COMPLETED      0:0                       amo-n018 
+
+================================================================================
+===================== Description of job accounting fields =====================
+================================================================================
+
+  JobID     - ID number of the job/step.
+               <JobID>.batch: resources requested/used by all commands (including mpirun!) in the job script EXCEPT srun
+               <JobID>.extern: resources used by external commands (e.g. session opened by SSH on the reserved node)
+               <JobID>.<number>: resources requested/used by the job step (COMMAND srun!) of <number> in the job script
+
+  ReqNodes  - Requested number of nodes for the job/step
+  ReqCPUS   - Requested number of CPUs for the job/step
+  ReqMem    - Requested amount of memory per CPU ('c' at the end) or 
+              per node ('n' at the end) for the job (NOT the step)
+  Timelimit - Wallclock time requested for the job
+
+  TotalCPU  - Total CPU time (SystemCPU + UserCPU) used by the job/step
+  MaxRSS    - Maximum memory(resident set size) among all tasks in the job/step
+  NNode     - Number of nodes in the job/step
+  NTasks    - Number of tasks in the job/step
+  Elapsed   - Wallclock time spent on the job/step
+  ExitCode  - Exit code returned by the job/step
+  NodeList  - List of nodes used in job/step
