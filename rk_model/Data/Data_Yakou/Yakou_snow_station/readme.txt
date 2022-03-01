@@ -7,3 +7,5 @@ Description: Alpine region is an important contributor in riverine and watershed
 Data Citation: Che, T., Li, X., Liu, S., Li, H., Xu, Z., Tan, J., Zhang, Y., Ren, Z., Xiao, L., Deng, J., Ma, M., Wang, J., Yang, X. (2018). Integrated hydrometeorological – snow – frozen ground observations in the alpine region of the Heihe River Basin, China. National Tibetan Plateau Data Center, DOI: https://doi.org/10.3972/hiwater.001.2019.db. CSTR: 18406.11.hiw. (Download the reference： RIS | Bibtex )
 
 Information about dataset recieved from: Dr. Xiao Xiong and Dr. Fan Zhang
+
+The idea is to pre-process this dataset
