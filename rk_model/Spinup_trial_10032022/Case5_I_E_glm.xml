@@ -198,9 +198,9 @@
     <ParameterList name="top level MPC" type="ParameterList">
       <Parameter name="PK type" type="string" value="strong MPC" />
       <Parameter name="PKs order" type="Array(string)" value="{SEB,permafrost surface and subsurface}" />
-      <!-- <ParameterList name="verbose object" type="ParameterList">
+      <ParameterList name="verbose object" type="ParameterList">
         <Parameter name="verbosity level" type="string" value="low" />
-      </ParameterList> -->
+      </ParameterList>
  
       <ParameterList name="time integrator" type="ParameterList">
         <Parameter name="extrapolate initial guess" type="bool" value="true" />
@@ -215,13 +215,13 @@
           <Parameter name="nonlinear tolerance" type="double" value="1e-06" />
           <Parameter name="diverged tolerance" type="double" value="100000.0" />
           <Parameter name="limit iterations" type="int" value="21" />
-          <!-- <ParameterList name="verbose object" type="ParameterList">
+          <ParameterList name="verbose object" type="ParameterList">
             <Parameter name="verbosity level" type="string" value="low" />
-          </ParameterList> -->
+          </ParameterList>
         </ParameterList>
-        <!-- <ParameterList name="verbose object" type="ParameterList">
+        <ParameterList name="verbose object" type="ParameterList">
           <Parameter name="verbosity level" type="string" value="low" />
-        </ParameterList> -->
+        </ParameterList>
         <ParameterList name="timestep controller smarter parameters" type="ParameterList">
           <Parameter name="max iterations" type="int" value="18" />
           <Parameter name="min iterations" type="int" value="10" />
@@ -245,17 +245,17 @@
       <Parameter name="supress Jacobian terms: d div K grad T / dp" type="bool" value="true" />
       <Parameter name="supress Jacobian terms: d div hq / dp,T" type="bool" value="true" />
       <Parameter name="dump preconditioner" type="bool" value="false" />
-      <!-- <ParameterList name="verbose object" type="ParameterList">
+      <ParameterList name="verbose object" type="ParameterList">
         <Parameter name="verbosity level" type="string" value="low" />
-      </ParameterList> -->
+      </ParameterList>
  
       <ParameterList name="ewc delegate" type="ParameterList">
         <Parameter name="predictor type" type="string" value="smart ewc" />
         <Parameter name="use pc_ice to determine sfc" type="bool" value="true" />
         <Parameter name="freeze-thaw cusp width [K]" type="double" value="1.0" />
-        <!-- <ParameterList name="verbose object" type="ParameterList">
+        <ParameterList name="verbose object" type="ParameterList">
           <Parameter name="verbosity level" type="string" value="low" />
-        </ParameterList> -->
+        </ParameterList>
       </ParameterList>
  
       <ParameterList name="water delegate" type="ParameterList">
@@ -276,17 +276,17 @@
           <Parameter name="number of functions" type="int" value="2" />
           <Parameter name="verbosity" type="int" value="0" />
         </ParameterList>
-        <!-- <ParameterList name="verbose object" type="ParameterList">
+        <ParameterList name="verbose object" type="ParameterList">
           <Parameter name="verbosity level" type="string" value="low" />
-        </ParameterList> -->
+        </ParameterList>
         <ParameterList name="gmres parameters" type="ParameterList">
           <Parameter name="preconditioning strategy" type="string" value="left" />
           <Parameter name="error tolerance" type="double" value="1e-06" />
           <Parameter name="convergence criteria" type="Array(string)" value="{relative residual,make one iteration}" />
           <Parameter name="maximum number of iteration" type="int" value="80" />
-          <!-- <ParameterList name="verbose object" type="ParameterList">
+          <ParameterList name="verbose object" type="ParameterList">
             <Parameter name="verbosity level" type="string" value="low" />
-          </ParameterList> -->
+          </ParameterList>
         </ParameterList>
       </ParameterList>
  
@@ -305,9 +305,9 @@
       <Parameter name="max valid change in saturation in a time step [-]" type="double" value="0.1" />
       <Parameter name="max valid change in ice saturation in a time step [-]" type="double" value="0.1" />
       <Parameter name="initial time step" type="double" value="86400.0" />
-      <!-- <ParameterList name="verbose object" type="ParameterList">
+      <ParameterList name="verbose object" type="ParameterList">
         <Parameter name="verbosity level" type="string" value="low" />
-      </ParameterList> -->
+      </ParameterList>
       <ParameterList name="diffusion" type="ParameterList">
         <Parameter name="discretization primary" type="string" value="mfd: two-point flux approximation" />
       </ParameterList>
@@ -319,13 +319,8 @@
       <ParameterList name="boundary conditions" type="ParameterList">
       </ParameterList>
  
-      <!--<ParameterList name="initial condition" type="ParameterList">
-        <Parameter name="hydrostatic head [m]" type="double" value="    1.0000000E+00" />
-        <Parameter name="hydrostatic water density [kg m^-3]" type="double" value="1000" />
-      </ParameterList> -->
-
       <ParameterList name="initial condition" type="ParameterList">
-        <Parameter name="restart file" type="string" value="/home/rk/ats_rk/testing/ats-demos/rk_model/Static_Spinup_Case1/checkpoint_spinup_final.h5" />
+        <Parameter name="restart file" type="string" value="/home/rk/ats_rk/testing/ats-demos/rk_model/Spinup_final_10032022/Static_spinup_scenario_I_HD11.demo/checkpoint_final.h5" />
       </ParameterList>
  
       <ParameterList name="water retention evaluator" type="ParameterList">
@@ -336,17 +331,17 @@
           <ParameterList name="peat" type="ParameterList">
             <Parameter name="region" type="string" value="subsurface domain peat" />
             <Parameter name="WRM Type" type="string" value="van Genuchten" />
-            <Parameter name="van Genuchten alpha [Pa^-1]" type="double" value="     1.0000000E-02" />
-            <Parameter name="van Genuchten n [-]" type="double" value=" 2.0500000E+00" />
-            <Parameter name="residual saturation [-]" type="double" value="  2.2432414E-01" />
+            <Parameter name="van Genuchten alpha [Pa^-1]" type="double" value="0.0025" />
+            <Parameter name="van Genuchten n [-]" type="double" value="1.48459" />
+            <Parameter name="residual saturation [-]" type="double" value="0.156116" />
             <Parameter name="smoothing interval width [saturation]" type="double" value="0.1" />
           </ParameterList>
           <ParameterList name="mineral" type="ParameterList">
             <Parameter name="region" type="string" value="subsurface domain mineral" />
             <Parameter name="WRM Type" type="string" value="van Genuchten" />
-            <Parameter name="van Genuchten alpha [Pa^-1]" type="double" value="     2.0074058E-03" />
-            <Parameter name="van Genuchten n [-]" type="double" value=" 2.0500000E+00" />
-            <Parameter name="residual saturation [-]" type="double" value="  1.5948806E-01" />
+            <Parameter name="van Genuchten alpha [Pa^-1]" type="double" value="0.0025" />
+            <Parameter name="van Genuchten n [-]" type="double" value="1.48459" />
+            <Parameter name="residual saturation [-]" type="double" value="0.156116" />
             <Parameter name="smoothing interval width [saturation]" type="double" value="0.1" />
           </ParameterList>
           <ParameterList name="bedrock" type="ParameterList">
@@ -362,9 +357,6 @@
           <Parameter name="permafrost WRM type" type="string" value="fpd permafrost model" />
           <Parameter name="minimum dsi_dpressure magnitude" type="double" value="1e-12" />
         </ParameterList>
-        <!-- <ParameterList name="verbose object" type="ParameterList">
-          <Parameter name="verbosity level" type="string" value="low" />
-        </ParameterList> -->
       </ParameterList>
  
     </ParameterList>
@@ -378,9 +370,9 @@
       <Parameter name="source term is differentiable" type="bool" value="false" />
       <Parameter name="mass source in meters" type="bool" value="true" />
       <Parameter name="initial time step" type="double" value="86400.0" />
-      <!-- <ParameterList name="verbose object" type="ParameterList">
+      <ParameterList name="verbose object" type="ParameterList">
         <Parameter name="verbosity level" type="string" value="low" />
-      </ParameterList> -->
+      </ParameterList>
       <ParameterList name="diffusion" type="ParameterList">
         <Parameter name="discretization primary" type="string" value="fv: default" />
       </ParameterList>
@@ -415,24 +407,34 @@
       <Parameter name="include thermal advection" type="bool" value="false" />
       <Parameter name="explicit advection" type="bool" value="false" />
       <Parameter name="supress advective terms in preconditioner" type="bool" value="true" />
-      <!-- <ParameterList name="verbose object" type="ParameterList">
+      <ParameterList name="verbose object" type="ParameterList">
         <Parameter name="verbosity level" type="string" value="low" />
-      </ParameterList> -->
+      </ParameterList>
       <ParameterList name="diffusion" type="ParameterList">
         <Parameter name="discretization primary" type="string" value="mfd: two-point flux approximation" />
       </ParameterList>
  
       <ParameterList name="boundary conditions" type="ParameterList">
+        <ParameterList name="temperature" type="ParameterList">
+          <ParameterList name="bottom" type="ParameterList">
+            <Parameter name="regions" type="Array(string)" value="{bottom face}" />
+            <ParameterList name="boundary temperature" type="ParameterList">
+              <ParameterList name="function-constant" type="ParameterList">
+                <Parameter name="value" type="double" value="268.45" />
+              </ParameterList>
+            </ParameterList>
+          </ParameterList>
+        </ParameterList>
       </ParameterList>
  
-      <!-- <ParameterList name="initial condition" type="ParameterList">
+      <!--<ParameterList name="initial condition" type="ParameterList">
         <ParameterList name="function" type="ParameterList">
           <ParameterList name="initial temperature cells" type="ParameterList">
             <Parameter name="region" type="string" value="domain" />
             <Parameter name="components" type="Array(string)" value="{face,cell}" />
             <ParameterList name="function" type="ParameterList">
               <ParameterList name="function-constant" type="ParameterList">
-                <Parameter name="value" type="double" value="265" />
+                <Parameter name="value" type="double" value="270.15" />
               </ParameterList>
             </ParameterList>
           </ParameterList>
@@ -440,7 +442,7 @@
       </ParameterList> -->
 
       <ParameterList name="initial condition" type="ParameterList">
-        <Parameter name="restart file" type="string" value="/home/rk/ats_rk/testing/ats-demos/rk_model/Static_Spinup_Case1/checkpoint_spinup_final.h5" />
+        <Parameter name="restart file" type="string" value="/home/rk/ats_rk/testing/ats-demos/rk_model/Spinup_final_10032022/Static_spinup_scenario_I_HD11.demo/checkpoint_final.h5" />
       </ParameterList>
  
       <ParameterList name="thermal conductivity evaluator" type="ParameterList">
@@ -448,18 +450,18 @@
           <ParameterList name="peat" type="ParameterList">
             <Parameter name="region" type="string" value="subsurface domain peat" />
             <Parameter name="thermal conductivity type" type="string" value="three-phase wet/dry" />
-            <Parameter name="thermal conductivity, saturated (unfrozen) [W m^-1 K^-1]" type="double" value="   4.3957661E-01" />
-            <Parameter name="thermal conductivity, dry [W m^-1 K^-1]" type="double" value="   1.0102341E-01" />
-            <Parameter name="unsaturated alpha frozen [-]" type="double" value="  1.5051142E+00" />
-            <Parameter name="unsaturated alpha unfrozen [-]" type="double" value="   4.8693541E-01" />
+            <Parameter name="thermal conductivity, saturated (unfrozen) [W m^-1 K^-1]" type="double" value="0.491955" />
+            <Parameter name="thermal conductivity, dry [W m^-1 K^-1]" type="double" value="0.120658" />
+            <Parameter name="unsaturated alpha frozen [-]" type="double" value="1.49655" />
+            <Parameter name="unsaturated alpha unfrozen [-]" type="double" value="0.477138" />
           </ParameterList>
           <ParameterList name="mineral" type="ParameterList">
             <Parameter name="region" type="string" value="subsurface domain mineral" />
             <Parameter name="thermal conductivity type" type="string" value="three-phase wet/dry" />
-            <Parameter name="thermal conductivity, saturated (unfrozen) [W m^-1 K^-1]" type="double" value="   9.5210506E-01" />
-            <Parameter name="thermal conductivity, dry [W m^-1 K^-1]" type="double" value="   9.8440543E-01" />
-            <Parameter name="unsaturated alpha frozen [-]" type="double" value="  1.4993891E+00" />
-            <Parameter name="unsaturated alpha unfrozen [-]" type="double" value="   6.9888403E-01" />
+            <Parameter name="thermal conductivity, saturated (unfrozen) [W m^-1 K^-1]" type="double" value="0.938164" />
+            <Parameter name="thermal conductivity, dry [W m^-1 K^-1]" type="double" value="0.9844" />
+            <Parameter name="unsaturated alpha frozen [-]" type="double" value="1.49909" />
+            <Parameter name="unsaturated alpha unfrozen [-]" type="double" value="0.6992" />
           </ParameterList>
           <ParameterList name="bedrock" type="ParameterList">
             <Parameter name="region" type="string" value="subsurface domain bedrock" />
@@ -470,9 +472,6 @@
             <Parameter name="unsaturated alpha unfrozen [-]" type="double" value="0.5" />
           </ParameterList>
         </ParameterList>
-        <!-- <ParameterList name="verbose object" type="ParameterList">
-          <Parameter name="verbosity level" type="string" value="low" />
-        </ParameterList> -->
       </ParameterList>
  
       <ParameterList name="enthalpy evaluator" type="ParameterList">
@@ -495,9 +494,9 @@
       <Parameter name="supress advective terms in preconditioner" type="bool" value="true" />
       <Parameter name="upwind conductivity method" type="string" value="arithmetic mean" />
       <Parameter name="initial time step" type="double" value="86400.0" />
-      <!-- <ParameterList name="verbose object" type="ParameterList">
+      <ParameterList name="verbose object" type="ParameterList">
         <Parameter name="verbosity level" type="string" value="low" />
-      </ParameterList> -->
+      </ParameterList>
       <ParameterList name="diffusion" type="ParameterList">
         <Parameter name="discretization primary" type="string" value="fv: default" />
       </ParameterList>
@@ -530,9 +529,9 @@
       <Parameter name="source term" type="bool" value="true" />
       <Parameter name="source key" type="string" value="snow-source_sink" />
       <Parameter name="source term is differentiable" type="bool" value="false" />
-      <!-- <ParameterList name="verbose object" type="ParameterList">
+      <ParameterList name="verbose object" type="ParameterList">
         <Parameter name="verbosity level" type="string" value="low" />
-      </ParameterList> -->
+      </ParameterList>
       <ParameterList name="initial condition" type="ParameterList">
         <ParameterList name="function" type="ParameterList">
           <ParameterList name="initial head" type="ParameterList">
@@ -540,7 +539,7 @@
             <Parameter name="component" type="string" value="cell" />
             <ParameterList name="function" type="ParameterList">
               <ParameterList name="function-constant" type="ParameterList">
-                <Parameter name="value" type="double" value="    1.5000000E-01" />
+                <Parameter name="value" type="double" value="0.0" />
                   <!-- What value do we assign here? The initial condition can be initialized from a spinup or we don't assign anything? -->
               </ParameterList>
             </ParameterList>
@@ -598,7 +597,7 @@
             <Parameter name="component" type="string" value="cell" />
             <ParameterList name="function" type="ParameterList">
               <ParameterList name="function-constant" type="ParameterList">
-                <Parameter name="value" type="double" value="   6.3739496E-01" />
+                <Parameter name="value" type="double" value="0.501199" />
               </ParameterList>
             </ParameterList>
           </ParameterList>
@@ -607,7 +606,7 @@
             <Parameter name="component" type="string" value="cell" />
             <ParameterList name="function" type="ParameterList">
               <ParameterList name="function-constant" type="ParameterList">
-                <Parameter name="value" type="double" value="   4.8103077E-01" />
+                <Parameter name="value" type="double" value="0.407367" />
               </ParameterList>
             </ParameterList>
           </ParameterList>
@@ -632,11 +631,11 @@
         <ParameterList name="compressible porosity model parameters" type="ParameterList">
           <ParameterList name="peat" type="ParameterList">
             <Parameter name="region" type="string" value="subsurface domain peat" />
-            <Parameter name="pore compressibility [Pa^-1]" type="double" value="    5.3466221E-11" />
+            <Parameter name="pore compressibility [Pa^-1]" type="double" value="1e-07" />
           </ParameterList>
           <ParameterList name="mineral" type="ParameterList">
             <Parameter name="region" type="string" value="subsurface domain mineral" />
-            <Parameter name="pore compressibility [Pa^-1]" type="double" value="    1.0000000E-13" />
+            <Parameter name="pore compressibility [Pa^-1]" type="double" value="1e-08" />
           </ParameterList>
           <ParameterList name="bedrock" type="ParameterList">
             <Parameter name="region" type="string" value="subsurface domain bedrock" />
@@ -653,7 +652,7 @@
             <Parameter name="component" type="string" value="cell" />
             <ParameterList name="function" type="ParameterList">
               <ParameterList name="function-constant" type="ParameterList">
-                <Parameter name="value" type="double" value="2.79893e-11" />
+                <Parameter name="value" type="double" value="5.242212720e-11" />
               </ParameterList>
             </ParameterList>
           </ParameterList>
@@ -662,7 +661,7 @@
             <Parameter name="component" type="string" value="cell" />
             <ParameterList name="function" type="ParameterList">
               <ParameterList name="function-constant" type="ParameterList">
-                <Parameter name="value" type="double" value="2.5e-14" />
+                <Parameter name="value" type="double" value="1.75e-13" />
               </ParameterList>
             </ParameterList>
           </ParameterList>
@@ -689,7 +688,7 @@
             <Parameter name="component" type="string" value="cell" />
             <ParameterList name="function" type="ParameterList">
               <ParameterList name="function-constant" type="ParameterList">
-                <Parameter name="value" type="double" value="   9.0000000E+02" />
+                <Parameter name="value" type="double" value="9.0000000000e+02" />
               </ParameterList>
             </ParameterList>
           </ParameterList>
@@ -698,7 +697,7 @@
             <Parameter name="component" type="string" value="cell" />
             <ParameterList name="function" type="ParameterList">
               <ParameterList name="function-constant" type="ParameterList">
-                <Parameter name="value" type="double" value="   1.9000000E+03" />
+                <Parameter name="value" type="double" value="1.9000000000e+03" />
               </ParameterList>
             </ParameterList>
           </ParameterList>
@@ -901,7 +900,7 @@
             <Parameter name="component" type="string" value="cell" />
             <ParameterList name="function" type="ParameterList">
               <ParameterList name="function-tabular" type="ParameterList">
-                <Parameter name="file" type="string" value="/home/rk/ats_rk/testing/ats-demos/rk_model/Data/Data_Yakou/Yakou_met_data_ITP_rk/Input_data_Spinup/Spinup_input_2017_10yrs.h5" />
+                <Parameter name="file" type="string" value="/home/rk/ats_rk/testing/ats-demos/rk_model/Data/Data_Yakou/Yakou_met_data_ITP_rk/Input_data_Spinup/Spinup_input_cyclic_10yrs.h5" />
                 <Parameter name="x header" type="string" value="time [s]" />
                 <Parameter name="y header" type="string" value="Incoming shortwave radiation (W/m^2)" />
               </ParameterList>
@@ -930,7 +929,7 @@
             <Parameter name="component" type="string" value="cell" />
             <ParameterList name="function" type="ParameterList">
               <ParameterList name="function-tabular" type="ParameterList">
-                <Parameter name="file" type="string" value="/home/rk/ats_rk/testing/ats-demos/rk_model/Data/Data_Yakou/Yakou_met_data_ITP_rk/Input_data_Spinup/Spinup_input_2017_10yrs.h5" />
+                <Parameter name="file" type="string" value="/home/rk/ats_rk/testing/ats-demos/rk_model/Data/Data_Yakou/Yakou_met_data_ITP_rk/Input_data_Spinup/Spinup_input_cyclic_10yrs.h5" />
                 <Parameter name="x header" type="string" value="time [s]" />
                 <Parameter name="y header" type="string" value="air temperature [K]" />
               </ParameterList>
@@ -947,7 +946,7 @@
             <Parameter name="component" type="string" value="cell" />
             <ParameterList name="function" type="ParameterList">
               <ParameterList name="function-tabular" type="ParameterList">
-                <Parameter name="file" type="string" value="/home/rk/ats_rk/testing/ats-demos/rk_model/Data/Data_Yakou/Yakou_met_data_ITP_rk/Input_data_Spinup/Spinup_input_2017_10yrs.h5" />
+                <Parameter name="file" type="string" value="/home/rk/ats_rk/testing/ats-demos/rk_model/Data/Data_Yakou/Yakou_met_data_ITP_rk/Input_data_Spinup/Spinup_input_cyclic_10yrs.h5" />
                 <Parameter name="x header" type="string" value="time [s]" />
                 <Parameter name="y header" type="string" value="Relative humidity at 5 m (%)" />
               </ParameterList>
@@ -967,7 +966,7 @@
             <Parameter name="component" type="string" value="cell" />
             <ParameterList name="function" type="ParameterList">
               <ParameterList name="function-tabular" type="ParameterList">
-                <Parameter name="file" type="string" value="/home/rk/ats_rk/testing/ats-demos/rk_model/Data/Data_Yakou/Yakou_met_data_ITP_rk/Input_data_Spinup/Spinup_input_2017_10yrs.h5" />
+                <Parameter name="file" type="string" value="/home/rk/ats_rk/testing/ats-demos/rk_model/Data/Data_Yakou/Yakou_met_data_ITP_rk/Input_data_Spinup/Spinup_input_cyclic_10yrs.h5" />
                 <Parameter name="x header" type="string" value="time [s]" />
                 <Parameter name="y header" type="string" value="Wind speed at 10 m (m/s)" />
               </ParameterList>
@@ -987,7 +986,7 @@
             <Parameter name="component" type="string" value="cell" />
             <ParameterList name="function" type="ParameterList">
               <ParameterList name="function-tabular" type="ParameterList">
-                <Parameter name="file" type="string" value="/home/rk/ats_rk/testing/ats-demos/rk_model/Data/Data_Yakou/Yakou_met_data_ITP_rk/Input_data_Spinup/Spinup_input_2017_10yrs.h5" />
+                <Parameter name="file" type="string" value="/home/rk/ats_rk/testing/ats-demos/rk_model/Data/Data_Yakou/Yakou_met_data_ITP_rk/Input_data_Spinup/Spinup_input_cyclic_10yrs.h5" />
                 <Parameter name="x header" type="string" value="time [s]" />
                 <Parameter name="y header" type="string" value="precipitation rain [m s^-1]" />
               </ParameterList>
@@ -1006,15 +1005,14 @@
             <Parameter name="region" type="string" value="surface domain" />
             <Parameter name="component" type="string" value="cell" />
             <ParameterList name="function" type="ParameterList">
-              <ParameterList name="function-tabular" type="ParameterList">
-                <!-- <Parameter name="file" type="string" value="  4.0000000E-01" /> -->
-                <Parameter name="file" type="string" value="/home/rk/ats_rk/testing/ats-demos/rk_model/Data/Data_Yakou/Yakou_met_data_ITP_rk/Input_data_Spinup/Spinup_input_2017_10yrs.h5" />
+              <!--<ParameterList name="function-tabular" type="ParameterList">
+                <Parameter name="file" type="string" value="/home/rk/ats_rk/testing/ats-demos/rk_model/Data/Data_Yakou/Yakou_met_data_ITP_rk/Input_data_Spinup/Spinup_input_cyclic_10yrs.h5" />
                 <Parameter name="x header" type="string" value="time [s]" />
-                <Parameter name="y header" type="string" value="precipitation snow [m SWE s^-1]_sd0.04" />
-              </ParameterList>
-              <!--<ParameterList name="function-constant" type="ParameterList">
-                <Parameter name="value" type="double" value="0.0" />
+                <Parameter name="y header" type="string" value="precipitation snow [m SWE s^-1]" />
               </ParameterList> -->
+              <ParameterList name="function-constant" type="ParameterList">
+                <Parameter name="value" type="double" value="0.0" />
+              </ParameterList>
             </ParameterList>
           </ParameterList>
         </ParameterList>
@@ -1073,7 +1071,7 @@
  
   <ParameterList name="observations" type="ParameterList">
     <ParameterList name="observation file" type="ParameterList">
-      <Parameter name="write interval" type="int" value="30" />
+      <Parameter name="write interval" type="int" value="1" />
       <Parameter name="observation output filename" type="string" value="observations.dat" />
       <Parameter name="times start period stop" type="Array(double)" value="{0.0,1.0,-1.0}" />
       <Parameter name="times start period stop units" type="string" value="d" />
@@ -1081,239 +1079,18 @@
       <ParameterList name="observed quantities" type="ParameterList">
         <!--<ParameterList name="water content [mol]" type="ParameterList">
           <Parameter name="variable" type="string" value="water_content" />
-          <Parameter name="region" type="string" value="domain" />
+          <Parameter name="region" type="string" value="subsurface domain" />
           <Parameter name="functional" type="string" value="extensive integral" />
           <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="surface water content [mol]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-water_content" />
-          <Parameter name="region" type="string" value="surface domain" />
-          <Parameter name="functional" type="string" value="extensive integral" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="snow water equivalent [mol]" type="ParameterList">
-          <Parameter name="variable" type="string" value="snow-water_equivalent" />
-          <Parameter name="region" type="string" value="surface domain" />
-          <Parameter name="functional" type="string" value="extensive integral" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="evaporation rate [m s^-1]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-evaporative_flux" />
-          <Parameter name="region" type="string" value="surface domain" />
+        </ParameterList>-->
+        <!--<ParameterList name="water table depth [m]" type="ParameterList">
+          <Parameter name="variable" type="string" value="water_table_depth" />
+          <Parameter name="region" type="string" value="subsurface domain" />
           <Parameter name="functional" type="string" value="average" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="discharge [mol s^-1]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-mass_flux" />
-          <Parameter name="region" type="string" value="surface outlet" />
-          <Parameter name="location name" type="string" value="face" />
-          <Parameter name="direction normalized flux" type="bool" value="true" />
-          <Parameter name="functional" type="string" value="extensive integral" />
-        </ParameterList>
-        <ParameterList name="surface-subsurface flux [mol s^-1]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-surface_subsurface_flux" />
-          <Parameter name="region" type="string" value="surface domain" />
-          <Parameter name="functional" type="string" value="average" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="precipitation rain [m s^-1]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-precipitation_rain" />
-          <Parameter name="region" type="string" value="surface domain" />
-          <Parameter name="functional" type="string" value="average" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="precipitation snow [m s^-1]" type="ParameterList">
-          <Parameter name="variable" type="string" value="snow-precipitation" />
-          <Parameter name="region" type="string" value="surface domain" />
-          <Parameter name="functional" type="string" value="average" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="snow melt [m s^-1]" type="ParameterList">
-          <Parameter name="variable" type="string" value="snow-melt" />
-          <Parameter name="region" type="string" value="surface domain" />
-          <Parameter name="functional" type="string" value="average" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="thaw depth [m]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-thaw_depth" />
-          <Parameter name="region" type="string" value="surface domain" />
-          <Parameter name="functional" type="string" value="average" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="water table depth [m]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-water_table_depth" />
-          <Parameter name="region" type="string" value="surface domain" />
-          <Parameter name="functional" type="string" value="average" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="surface temperature [K]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-temperature" />
-          <Parameter name="region" type="string" value="surface domain" />
-          <Parameter name="functional" type="string" value="average" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>  -->
-        <!--<ParameterList name="point 0.1 temperature [K]" type="ParameterList">
-          <Parameter name="variable" type="string" value="temperature" />
-          <Parameter name="region" type="string" value="subsurface point 0.1" />
-          <Parameter name="functional" type="string" value="point" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="point 0.4 temperature [K]" type="ParameterList">
-          <Parameter name="variable" type="string" value="temperature" />
-          <Parameter name="region" type="string" value="subsurface point 0.4" />
-          <Parameter name="functional" type="string" value="point" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="point 1 temperature [K]" type="ParameterList">
-          <Parameter name="variable" type="string" value="temperature" />
-          <Parameter name="region" type="string" value="subsurface point 1" />
-          <Parameter name="functional" type="string" value="point" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="point 0.01 saturation liquid" type="ParameterList">
-          <Parameter name="variable" type="string" value="saturation_liquid" />
-          <Parameter name="region" type="string" value="subsurface point 0.01" />
-          <Parameter name="functional" type="string" value="point" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="point 0.03 saturation liquid" type="ParameterList">
-          <Parameter name="variable" type="string" value="saturation_liquid" />
-          <Parameter name="region" type="string" value="subsurface point 0.03" />
-          <Parameter name="functional" type="string" value="point" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="point 0.05 saturation liquid" type="ParameterList">
-          <Parameter name="variable" type="string" value="saturation_liquid" />
-          <Parameter name="region" type="string" value="subsurface point 0.05" />
-          <Parameter name="functional" type="string" value="point" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="point 0.1 saturation liquid" type="ParameterList">
-          <Parameter name="variable" type="string" value="saturation_liquid" />
-          <Parameter name="region" type="string" value="subsurface point 0.1" />
-          <Parameter name="functional" type="string" value="point" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="point 0.4 saturation liquid" type="ParameterList">
-          <Parameter name="variable" type="string" value="saturation_liquid" />
-          <Parameter name="region" type="string" value="subsurface point 0.4" />
-          <Parameter name="functional" type="string" value="point" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="point 1 saturation liquid" type="ParameterList">
-          <Parameter name="variable" type="string" value="saturation_liquid" />
-          <Parameter name="region" type="string" value="subsurface point 1" />
-          <Parameter name="functional" type="string" value="point" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="point 0.01 saturation ice" type="ParameterList">
-          <Parameter name="variable" type="string" value="saturation_ice" />
-          <Parameter name="region" type="string" value="subsurface point 0.01" />
-          <Parameter name="functional" type="string" value="point" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="point 0.03 saturation ice" type="ParameterList">
-          <Parameter name="variable" type="string" value="saturation_ice" />
-          <Parameter name="region" type="string" value="subsurface point 0.03" />
-          <Parameter name="functional" type="string" value="point" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="point 0.05 saturation ice" type="ParameterList">
-          <Parameter name="variable" type="string" value="saturation_ice" />
-          <Parameter name="region" type="string" value="subsurface point 0.05" />
-          <Parameter name="functional" type="string" value="point" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="point 0.1 saturation ice" type="ParameterList">
-          <Parameter name="variable" type="string" value="saturation_ice" />
-          <Parameter name="region" type="string" value="subsurface point 0.1" />
-          <Parameter name="functional" type="string" value="point" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="point 0.4 saturation ice" type="ParameterList">
-          <Parameter name="variable" type="string" value="saturation_ice" />
-          <Parameter name="region" type="string" value="subsurface point 0.4" />
-          <Parameter name="functional" type="string" value="point" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="point 1 saturation ice" type="ParameterList">
-          <Parameter name="variable" type="string" value="saturation_ice" />
-          <Parameter name="region" type="string" value="subsurface point 1" />
-          <Parameter name="functional" type="string" value="point" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="point 0.01 liquid density" type="ParameterList">
-          <Parameter name="variable" type="string" value="molar_density_liquid" />
-          <Parameter name="region" type="string" value="subsurface point 0.01" />
-          <Parameter name="functional" type="string" value="point" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="point 0.03 liquid density" type="ParameterList">
-          <Parameter name="variable" type="string" value="molar_density_liquid" />
-          <Parameter name="region" type="string" value="subsurface point 0.03" />
-          <Parameter name="functional" type="string" value="point" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="point 0.05 liquid density" type="ParameterList">
-          <Parameter name="variable" type="string" value="molar_density_liquid" />
-          <Parameter name="region" type="string" value="subsurface point 0.05" />
-          <Parameter name="functional" type="string" value="point" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="point 0.1 liquid density" type="ParameterList">
-          <Parameter name="variable" type="string" value="molar_density_liquid" />
-          <Parameter name="region" type="string" value="subsurface point 0.1" />
-          <Parameter name="functional" type="string" value="point" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="point 0.4 liquid density" type="ParameterList">
-          <Parameter name="variable" type="string" value="molar_density_liquid" />
-          <Parameter name="region" type="string" value="subsurface point 0.4" />
-          <Parameter name="functional" type="string" value="point" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="point 1 liquid density" type="ParameterList">
-          <Parameter name="variable" type="string" value="molar_density_liquid" />
-          <Parameter name="region" type="string" value="subsurface point 1" />
-          <Parameter name="functional" type="string" value="point" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="point 0.01 ice density" type="ParameterList">
-          <Parameter name="variable" type="string" value="molar_density_ice" />
-          <Parameter name="region" type="string" value="subsurface point 0.01" />
-          <Parameter name="functional" type="string" value="point" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="point 0.03 ice density" type="ParameterList">
-          <Parameter name="variable" type="string" value="molar_density_ice" />
-          <Parameter name="region" type="string" value="subsurface point 0.03" />
-          <Parameter name="functional" type="string" value="point" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="point 0.05 ice density" type="ParameterList">
-          <Parameter name="variable" type="string" value="molar_density_ice" />
-          <Parameter name="region" type="string" value="subsurface point 0.05" />
-          <Parameter name="functional" type="string" value="point" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="point 0.1 ice density" type="ParameterList">
-          <Parameter name="variable" type="string" value="molar_density_ice" />
-          <Parameter name="region" type="string" value="subsurface point 0.1" />
-          <Parameter name="functional" type="string" value="point" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="point 0.4 ice density" type="ParameterList">
-          <Parameter name="variable" type="string" value="molar_density_ice" />
-          <Parameter name="region" type="string" value="subsurface point 0.4" />
-          <Parameter name="functional" type="string" value="point" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="point 1 ice density" type="ParameterList">
-          <Parameter name="variable" type="string" value="molar_density_ice" />
-          <Parameter name="region" type="string" value="subsurface point 1" />
-          <Parameter name="functional" type="string" value="point" />
           <Parameter name="location name" type="string" value="cell" />
         </ParameterList> -->
+ 
+        <!-- Finding the temperature at the 13 depths -->
         <!--<ParameterList name="point -0.01 temperature [K]" type="ParameterList">
           <Parameter name="variable" type="string" value="temperature" />
           <Parameter name="region" type="string" value="subsurface point -0.01" />
@@ -1381,18 +1158,7 @@
           <Parameter name="functional" type="string" value="average" />
           <Parameter name="location name" type="string" value="cell" />
         </ParameterList>
-        <ParameterList name="water table depth [m]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-water_table_depth" />
-          <Parameter name="region" type="string" value="surface domain" />
-          <Parameter name="functional" type="string" value="average" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="surface temperature [K]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-temperature" />
-          <Parameter name="region" type="string" value="surface domain" />
-          <Parameter name="functional" type="string" value="average" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
+
         <ParameterList name="point -0.04 temperature [K]" type="ParameterList">
           <Parameter name="variable" type="string" value="temperature" />
           <Parameter name="region" type="string" value="subsurface point -0.04" />
@@ -1435,7 +1201,7 @@
           <Parameter name="functional" type="string" value="point" />
           <Parameter name="location name" type="string" value="cell" />
         </ParameterList>
-        <!--<ParameterList name="point -5.0 temperature [K]" type="ParameterList">
+        <ParameterList name="point -5.0 temperature [K]" type="ParameterList">
           <Parameter name="variable" type="string" value="temperature" />
           <Parameter name="region" type="string" value="subsurface point -5.0" />
           <Parameter name="functional" type="string" value="point" />
@@ -1464,7 +1230,7 @@
           <Parameter name="region" type="string" value="subsurface point -40.0" />
           <Parameter name="functional" type="string" value="point" />
           <Parameter name="location name" type="string" value="cell" />
-        </ParameterList> -->
+        </ParameterList>
  
         <!-- Extracting data of the saturation of liquid at the 13 depths-->
         <!--<ParameterList name="point -0.01 saturation liquid" type="ParameterList">
@@ -1515,7 +1281,7 @@
           <Parameter name="functional" type="string" value="point" />
           <Parameter name="location name" type="string" value="cell" />
         </ParameterList>
-        <!--<ParameterList name="point -5.0 saturation liquid" type="ParameterList">
+        <ParameterList name="point -5.0 saturation liquid" type="ParameterList">
           <Parameter name="variable" type="string" value="saturation_liquid" />
           <Parameter name="region" type="string" value="subsurface point -5.0" />
           <Parameter name="functional" type="string" value="point" />
@@ -1526,10 +1292,10 @@
           <Parameter name="region" type="string" value="subsurface point -10.0" />
           <Parameter name="functional" type="string" value="point" />
           <Parameter name="location name" type="string" value="cell" />
-        </ParameterList> -->
+        </ParameterList>
  
         <!-- Extracting data of the saturation of ice at the 13 depths-->
-        <!--<ParameterList name="point -0.01 saturation ice" type="ParameterList">
+        <ParameterList name="point -0.01 saturation ice" type="ParameterList">
           <Parameter name="variable" type="string" value="saturation_ice" />
           <Parameter name="region" type="string" value="subsurface point -0.01" />
           <Parameter name="functional" type="string" value="point" />
@@ -1588,12 +1354,106 @@
           <Parameter name="region" type="string" value="subsurface point -10.0" />
           <Parameter name="functional" type="string" value="point" />
           <Parameter name="location name" type="string" value="cell" />
-        </ParameterList> -->
+        </ParameterList>
+         <ParameterList name="point -20.0 saturation ice" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_ice" />
+          <Parameter name="region" type="string" value="subsurface point -20.0" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="point -30.0 saturation ice" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_ice" />
+          <Parameter name="region" type="string" value="subsurface point -30.0" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="point -40.0 saturation ice" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_ice" />
+          <Parameter name="region" type="string" value="subsurface point -40.0" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+
+
+        <ParameterList name="point -0.01 saturation gas" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_gas" />
+          <Parameter name="region" type="string" value="subsurface point -0.01" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="point -0.04 saturation gas" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_gas" />
+          <Parameter name="region" type="string" value="subsurface point -0.04" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="point -0.1 saturation gas" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_gas" />
+          <Parameter name="region" type="string" value="subsurface point -0.1" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="point -0.2 saturation gas" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_gas" />
+          <Parameter name="region" type="string" value="subsurface point -0.2" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="point -0.4 saturation gas" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_gas" />
+          <Parameter name="region" type="string" value="subsurface point -0.4" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="point -0.8 saturation gas" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_gas" />
+          <Parameter name="region" type="string" value="subsurface point -0.8" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="point -1.2 saturation gas" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_gas" />
+          <Parameter name="region" type="string" value="subsurface point -1.2" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="point -1.6 saturation gas" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_gas" />
+          <Parameter name="region" type="string" value="subsurface point -1.6" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="point -5.0 saturation gas" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_gas" />
+          <Parameter name="region" type="string" value="subsurface point -5.0" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="point -10.0 saturation gas" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_gas" />
+          <Parameter name="region" type="string" value="subsurface point -10.0" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="point -20.0 saturation gas" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_gas" />
+          <Parameter name="region" type="string" value="subsurface point -20.0" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="point -30.0 saturation gas" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_gas" />
+          <Parameter name="region" type="string" value="subsurface point -30.0" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="point -40.0 saturation gas" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_gas" />
+          <Parameter name="region" type="string" value="subsurface point -40.0" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList> 
       </ParameterList>
     </ParameterList>
   </ParameterList>
-  <!--<ParameterList name="checkpoint" type="ParameterList">
-    <Parameter name="times start period stop" type="Array(double)" value="{0.0,30,-1.0}" />
-    <Parameter name="times start period stop units" type="string" value="d" />
-  </ParameterList> -->
 </ParameterList>
